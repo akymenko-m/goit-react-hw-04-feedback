@@ -1,29 +1,18 @@
 import PropTypes from 'prop-types';
+import { ButtonContainer, Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  console.log(options);
-  //   console.log(onLeaveFeedback);
-
   return (
-    <div>
+    <ButtonContainer>
       {Object.keys(options).map(key => {
-        console.log(key);
         const newKey = key[0].toUpperCase() + key.slice(1);
-        console.log(newKey);
         return (
-          <button
-            key={key}
-            onClick={() => {
-              console.log(options);
-              onLeaveFeedback(key);
-            }}
-            type="button"
-          >
+          <Button key={key} onClick={() => onLeaveFeedback(key)} type="button">
             {newKey}
-          </button>
+          </Button>
         );
       })}
-    </div>
+    </ButtonContainer>
   );
 };
 

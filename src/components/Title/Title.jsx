@@ -1,3 +1,5 @@
+import { FeedbackTitle } from './Title.styled';
+
 export const Title = () => {
-  return <h2>Please leave feedback</h2>;
+  return <FeedbackTitle>Please leave feedback</FeedbackTitle>;
 };
